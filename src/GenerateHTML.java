@@ -12,7 +12,7 @@ public class GenerateHTML {
 				+"	<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">"
 				+"</header>"
 				+"<body>"
-				+"	<h1>Nice meme website website website website.</h1>"	
+				+"	<h1>Cyka! Bilyat.</h1>"	
 				+"</body>"
 				+"</html>";
 		
