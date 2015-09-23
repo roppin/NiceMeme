@@ -28,7 +28,7 @@ public class ScrapeReddit {
 		
 		Elements links = siteTable.children();
 		
-		for(int i = 0; i < links.size()-1;i+=2){
+		for(int i = 0; i < 1;i+=2){
 			
 			Element link = links.eq(i).first();
 			
@@ -40,7 +40,29 @@ public class ScrapeReddit {
 			
 			String upvotes = votes.eq(2).first().text();
 			
-			System.out.println(Integer.parseInt(upvotes));
+			int upvotesInt = Integer.parseInt(upvotes);
+			
+			Element info = attributes.eq(4).first();
+			
+			Elements infoArray = info.children();
+			
+			Element lowestLevel = infoArray.eq(0).first();
+			
+			Element subrOne = infoArray.eq(1).first();
+			
+			Elements subrA = subrOne.getElementsByTag("a");
+			
+			String subreddit = subrA.last().text();
+			
+			Elements a = lowestLevel.getElementsByTag("a");
+			
+			Element lowerestLevel = a.eq(0).first();
+			
+			String finalLink = a.attr("href");
+			
+			String finalTitle = lowerestLevel.text();
+			
+			System.out.println(subreddit);
 			
 		}
 		

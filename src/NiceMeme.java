@@ -4,7 +4,6 @@ public class NiceMeme {
 		
 		ScrapeReddit.scrape();
 		
-		System.out.println("hello world");
 		GenerateHTML.generateHTML();
 	}
 	
