@@ -1,8 +1,7 @@
 public class RedditPost {
-
 	
+	String title;
 	int upvotes;
-	String url;
 	String urlOfLink;
 	
 }

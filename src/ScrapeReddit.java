@@ -26,7 +26,23 @@ public class ScrapeReddit {
 		
 		Element siteTable = content.eq(0).first().getElementById("siteTable");
 		
-		System.out.println(siteTable);
+		Elements links = siteTable.children();
+		
+		for(int i = 0; i < links.size()-1;i+=2){
+			
+			Element link = links.eq(i).first();
+			
+			Elements attributes = link.children();
+			
+			Element karma = attributes.eq(2).first();
+			
+			Elements votes = karma.children();
+			
+			String upvotes = votes.eq(2).first().text();
+			
+			System.out.println(Integer.parseInt(upvotes));
+			
+		}
 		
 	}
 	
